@@ -1,0 +1,31 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  font-family: Roboto, Arial, sans-serif;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+
+  a {
+    color: white;
+    text-decoration: none;
+    margin-left: 0.5rem;
+    font-weight: 500;
+
+    &.active-link {
+      border-bottom: 2px solid white;
+    }
+  }
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.content {
+  padding: 1.5rem;
+}

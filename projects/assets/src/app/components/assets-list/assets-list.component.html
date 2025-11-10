@@ -1,0 +1,11 @@
+<mat-toolbar color="primary" class="assets__toolbar">
+  <span class="assets__title">Assets</span>
+</mat-toolbar>
+
+<section class="assets__grid">
+  @for (asset of assets(); track asset.id) {
+  <app-assets-list-item [asset]="asset" />
+  } @empty {
+  <p class="assets__empty">No assets available</p>
+  }
+</section>

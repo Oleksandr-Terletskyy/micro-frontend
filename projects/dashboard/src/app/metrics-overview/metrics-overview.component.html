@@ -1,0 +1,12 @@
+<mat-toolbar color="primary">
+  <span>Overview Metrics</span>
+</mat-toolbar>
+<div class="overview-grid">
+  <mat-card *ngFor="let metric of metrics" class="metric-card">
+    <div class="metric-content">
+      <h3>{{ metric.title }}</h3>
+      <h2>{{ metric.value }}</h2>
+      <p>{{ metric.subtitle }}</p>
+    </div>
+  </mat-card>
+</div>

@@ -1,0 +1,29 @@
+<mat-toolbar color="primary" class="asset__toolbar">
+  <span class="asset__title">Asset Overview</span>
+</mat-toolbar>
+
+<section class="asset__details" *ngIf="asset() as a; else loading">
+  <mat-card class="asset__card">
+    <h2 class="asset__name">{{ a.name }}</h2>
+    <mat-divider />
+
+    <h3 class="asset__subtitle">Vulnerabilities:</h3>
+    <ul class="asset__vuln-list">
+      @for (vuln of a.vulnerabilities; track vuln.id) {
+      <li
+        class="asset__vuln"
+        [ngClass]="'asset__vuln--' + vuln.severity.toLowerCase()"
+      >
+        <strong>{{ vuln.severity | uppercase }}</strong> —
+        {{ vuln.description }}
+      </li>
+      } @empty {
+      <li class="asset__vuln asset__vuln--none">No vulnerabilities found</li>
+      }
+    </ul>
+  </mat-card>
+</section>
+
+<ng-template #loading>
+  <p class="asset__loading">Loading asset data...</p>
+</ng-template>

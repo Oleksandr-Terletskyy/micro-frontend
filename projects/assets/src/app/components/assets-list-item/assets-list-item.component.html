@@ -1,0 +1,12 @@
+<mat-card
+  class="assets-item"
+  [routerLink]="['/assets', asset.id]"
+  role="button"
+  tabindex="0"
+>
+  <div class="assets-item__content">
+    <h3 class="assets-item__name">{{ asset.name }}</h3>
+    <p class="assets-item__status">Status: {{ asset.status }}</p>
+    <p class="assets-item__owner">Owner: {{ asset.owner }}</p>
+  </div>
+</mat-card>

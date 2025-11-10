@@ -1,0 +1,53 @@
+.asset {
+  &__toolbar {
+    padding: 0 1rem;
+  }
+
+  &__card {
+    margin: 1rem;
+    padding: 1rem;
+  }
+
+  &__name {
+    margin: 0;
+    color: #3f51b5;
+  }
+
+  &__subtitle {
+    margin-top: 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+  &__vuln-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  &__vuln {
+    padding: 0.25rem 0;
+    font-size: 0.9rem;
+
+    &--high {
+      color: #d32f2f;
+    }
+
+    &--medium {
+      color: #f57c00;
+    }
+
+    &--low {
+      color: #1976d2;
+    }
+
+    &--none {
+      color: #388e3c;
+    }
+  }
+
+  &__loading {
+    padding: 1rem;
+    text-align: center;
+    color: #888;
+  }
+}
